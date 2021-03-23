@@ -57,6 +57,7 @@ public class CCCRTestExecutionListener implements TestWatcher, AfterAllCallback 
             String repo = URLEncoder.encode(GH_URL, "UTF-8");
             String url = "https://ccclassroom.appspot.com/submit?aid="
                     + CC_AID + "&cid=" + CC_CID + "&ghn=" + ghName + "&t=" + total + "&s=" + success + "&r=" + repo;
+            System.out.println("##### CCCR SENDING: " + url);
             URL u = new URL(url);
             Object o = u.getContent();
         } catch (Exception ex) {
